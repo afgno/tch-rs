@@ -223,6 +223,7 @@ fn main() {
         let use_hip = libtorch.join("lib").join("libtorch_hip.so").exists()
             || libtorch.join("lib").join("torch_hip.dll").exists();
         println!("cargo:rustc-link-search=native={}", libtorch.join("lib").display());
+        println!("cargo:rustc-link-lib=torchvision");
 
         make(&libtorch, use_cuda, use_hip);
 

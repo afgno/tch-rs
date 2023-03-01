@@ -12,6 +12,7 @@
 #include<stdexcept>
 #include<vector>
 #include "torch_api.h"
+#include <torchvision/vision.h>
 
 #define STB_IMAGE_IMPLEMENTATION
 #include "stb_image.h"
